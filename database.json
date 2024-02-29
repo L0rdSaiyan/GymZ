@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+          "id": "1",
+          "name": "viktor",
+          "password": "atumalaka",
+          "content": "eng soft",
+          "exercices": [
+        {
+          "name": "tríceps na corda",
+          "reps": "15x3"
+        }
+        ]
+        }
+      ]
+}
