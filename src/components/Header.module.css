@@ -1,0 +1,26 @@
+:root
+{
+  --dark-color: rgb(53, 53, 53);
+
+}
+
+.header
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  top: 0;
+  position: fixed; /* Fixed position */
+  width: 100%; /* Take up the full width of the viewport */
+
+}
+
+.header p
+{
+  font-size: 30px;
+  color: #fff;
+}

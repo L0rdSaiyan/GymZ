@@ -9,8 +9,29 @@
         {
           "name": "tríceps na corda",
           "reps": "15x3"
+        },
+        {
+          "name": "rosca martelo",
+          "reps": "10x3"
         }
         ]
+        },
+        {
+          "id": "2",
+          "name": "patrick",
+          "password": "stylo",
+          "content": "eng soft",
+          "exercices": [
+        {
+          "name": "tríceps na corda",
+          "reps": "15x3"
+        },
+        {
+          "name": "rosca invertida",
+          "reps": "10x3"
+        }
+        ]
+
         }
       ]
 }

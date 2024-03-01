@@ -9,4 +9,16 @@ class User
     }
 }
 
+export class Exercice
+{
+
+    constructor(name,reps)
+    {
+        this.name = name
+        this.reps = reps
+    }
+
+
+}
+
 export default User

@@ -1,0 +1,19 @@
+.footer p
+{
+  color: #fff;
+}
+
+.footer
+{
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Corrigido o box-shadow para ter um valor de cor mais claro */
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  bottom: 0;
+  position: fixed; /* Fixed position */
+  width: 100%; /* Take up the full width of the viewport */
+}

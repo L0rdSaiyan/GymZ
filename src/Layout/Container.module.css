@@ -1,0 +1,32 @@
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(53, 53, 53);
+    background-image: url("../images/banner-variation-2.jpg");
+    background-position:30%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+  }
+
+  @media screen and (max-width: 1200px) {
+    .container
+    {
+     background-position: center;
+    }
+  
+  
+  }
+
+  @media screen and (max-width: 720px) {
+ 
+    .container
+    {
+     background-image: url("../images/About.jpg");
+    }
+ 
+  }

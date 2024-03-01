@@ -11,17 +11,20 @@ import Home from './components/Home';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>
+    element: <App></App>,
+    children: [
+      {
+        path: "/login",
+        element: <LoginPage></LoginPage>
+      },
+      {
+        path: "/home",
+        element: <Home></Home>
+      }
+    ]
     
-  },
-  {
-    path: "/login",
-    element: <LoginPage></LoginPage>
-  },
-  {
-    path: "/home",
-    element: <Home></Home>
   }
+
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
