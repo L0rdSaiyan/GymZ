@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext} from "react";
 import User, { Exercice } from "../model/UserModel";
 import Swal from "sweetalert2"
 import eye from "../images/eyeIcon.png";
 import eyeSlash from "../images/eyeIconSlash.png"
 import { useNavigate } from "react-router-dom";
+
+export const UserContext = createContext()
 
 export function LoginController()
 {
@@ -43,10 +45,13 @@ export function LoginController()
 
   function handleNameChange(event) {
     setName(event.target.value);
+    console.log(name)
   }
 
   function handlePassChange(event) {
     setPass(event.target.value);
+    console.log(pass)
+
   }
 
   function handleKeyDown(event) {
@@ -74,7 +79,7 @@ export function LoginController()
     console.log(typeof(exercices))
   }
 
-  function mountUser(firstUser){
+  function createUser(firstUser){
     const user = new User(
       firstUser.id,
       firstUser.name,
@@ -91,7 +96,7 @@ export function LoginController()
       setAlert("Error", "Por favor insira algo","error")
     }else
     {
-    fetch(`https://gym-z-users.vercel.app/users?name=${name}&password=${pass}`, {
+    fetch(`https://gym-z-users.vercel.app/users?name=${name.trim()}&password=${pass}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -101,7 +106,7 @@ export function LoginController()
       .then((data) => {
         if (!objectIsEmpty(data)) {
           const firstUser = data[0];
-          mountUser(firstUser)
+          setUser(firstUser)
           console.table(firstUser);
           console.log(firstUser.exercices);
           console.log(typeof(firstUser.exercices))
@@ -110,8 +115,6 @@ export function LoginController()
           mountExercices(firstUser.exercices);
           window.localStorage.setItem("user", firstUser.name);
           window.localStorage.setItem("pass", firstUser.password);
-
-
           console.log(`usuario encontrado ${firstUser.name}`);
           if(redirect){
           setAlertWithRedirect("Sucesso!", "Login realizado. Redirecionando...", "sucess", 1000, "/home")
@@ -123,12 +126,27 @@ export function LoginController()
           // navigate("/home");
         } else 
         {
+          console.log(pass)
           setAlert("Error", "Usuário não encontrado!", "error")
         }
       
       });
     }
-  }
+
+    function addUserToDataBase()
+    {
+      
+        fetch('https://gym-z-users.vercel.app/users',{
+          method: "POST",
+          headers:
+          {
+            "Content-type": "application/json"
+          },
+          // body: JSON.stringify(name,pass)
+        })
+  
+      }
+    }
 
   return{
     name,

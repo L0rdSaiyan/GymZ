@@ -1,4 +1,5 @@
 import { LoginController } from "../controller/LoginController";
+import image from "../images/About.jpg"
 import { useEffect } from "react";
 export default function Home()
 {
@@ -9,15 +10,7 @@ export default function Home()
         name,
         pass,
         user,
-        eye,
-        isPasswordVisible,
         exercices,
-        eyeIcon,
-        eyeSlash,
-        handleNameChange,
-        handlePassChange,
-        togglePasswordVisibility,
-        handleKeyDown,
         getUser
     } = LoginController()
     

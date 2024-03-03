@@ -1,0 +1,41 @@
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+input[type="password"] {
+  font-size: 1.6rem;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid hsla(0, 0%, 100%, 0.5);
+  background: transparent;
+  width: calc(100% - 40px); /* Leva em consideração o espaço ocupado pelo ícone do olho */
+}
+
+::placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+.eyeIcon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 720px) {
+  input[type="password"] {
+    font-size: 1rem;
+  }
+
+  .eyeIcon {
+    bottom: 33%;
+  }
+}

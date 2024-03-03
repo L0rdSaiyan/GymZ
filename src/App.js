@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import LoginPage from './components/LoginPage';
+import LoginPage from './components/pages/LoginPage';
 import Footer from './components/Footer'
 import { Outlet } from 'react-router-dom';
 import Container from './Layout/Container';

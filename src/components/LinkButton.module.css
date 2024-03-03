@@ -1,0 +1,9 @@
+a{
+  margin: 2px;
+  color:  #c0bebe;
+}
+
+a:hover
+{
+  color:  #f3f0f0;
+}

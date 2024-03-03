@@ -7,8 +7,7 @@
 .header
 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   background: transparent;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
   border-radius: 20px;
@@ -23,4 +22,22 @@
 {
   font-size: 30px;
   color: #fff;
+  margin-left: 1rem;
+}
+
+.list
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li
+{
+  margin-right: 1rem;
+}
+
+li
+{
+  list-style: none;
 }
