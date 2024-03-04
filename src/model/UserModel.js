@@ -1,8 +1,7 @@
 class User
 {
-    constructor(id, name, password, content)
+    constructor(name, password, content)
     {
-        this.id = id
         this.name = name
         this.password = password
         this.content = content

@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import LoginPage from './components/pages/LoginPage';
 import SignUpPage from "./components/pages/SingUpPage"
-import Home from './components/Home';
+import Home from '../src/components/pages/Home'
 const router = createBrowserRouter([
   {
     path: "/",

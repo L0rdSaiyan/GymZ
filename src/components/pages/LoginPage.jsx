@@ -36,6 +36,7 @@ export default function LoginPage() {
           eyeSlash={eyeSlash}
           handlePassChange={handlePassChange}
           togglePasswordVisibility={togglePasswordVisibility}
+          isVisible={isPasswordVisible}
           handleKeyDown={handleKeyDown}
           text="Insira a sua senha"
         />

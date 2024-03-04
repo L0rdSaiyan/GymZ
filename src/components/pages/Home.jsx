@@ -1,32 +1,29 @@
-import { LoginController } from "../controller/LoginController";
-import image from "../images/About.jpg"
+import { LoginController } from "../../controller/LoginController";
+import image from "../../images/About.jpg";
 import { useEffect } from "react";
-export default function Home()
-{
+
+export default function Home() {
     
     const cat = localStorage.getItem("user");
-    const cat2 = localStorage.getItem("pass")
-    const{
+    const cat2 = localStorage.getItem("pass");
+    const {
         name,
         pass,
         user,
         exercices,
         getUser
-    } = LoginController()
+    } = LoginController();
     
-    useEffect(()=>{
-        getUser(cat,cat2,false)
-    },[])
+    useEffect(() => {
+        getUser(cat, cat2, false);
+    }, []);
 
-    
-
-
-    return(
+    return (
         <div>
-           {cat}
-           {user && (
+              {user && (
               <>
                 <p>{user.name}</p>
+                {exercices.length > 0 && (
                   <div>
                     <p>Exercices:</p>
                     <ul>
@@ -37,8 +34,9 @@ export default function Home()
                       ))}
                     </ul>
                   </div>
+                )}
               </>
             )}
         </div>
-    )
+    );
 }

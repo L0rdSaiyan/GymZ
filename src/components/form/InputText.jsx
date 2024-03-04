@@ -3,13 +3,12 @@ export default function InputText({name,handleNameChange})
 {
 
     return(
-        <>
+        <div className={styles.container}>
         <input className={styles.inputText}
           type="text"
           placeholder="User"
-          value={name}
           onChange={handleNameChange}
         />
-        </>
+        </div>
     )
 }

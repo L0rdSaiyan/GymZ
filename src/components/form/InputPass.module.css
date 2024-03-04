@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-input[type="password"] {
+.input {
   font-size: 1.6rem;
   padding: 10px;
   border-radius: 5px;
@@ -13,7 +13,6 @@ input[type="password"] {
   border: none;
   border-bottom: 2px solid hsla(0, 0%, 100%, 0.5);
   background: transparent;
-  width: calc(100% - 40px); /* Leva em consideração o espaço ocupado pelo ícone do olho */
 }
 
 ::placeholder {
@@ -26,7 +25,7 @@ input[type="password"] {
   height: 40px;
   position: absolute;
   top: 50%;
-  right: 4%;
+  right: 10%;
   transform: translateY(-50%);
 }
 

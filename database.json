@@ -1,11 +1,11 @@
 {
-    "users": [
-        {
-          "id": "1",
-          "name": "viktor",
-          "password": "atumalaka",
-          "content": "eng soft",
-          "exercices": [
+  "users": [
+    {
+      "id": "0",
+      "name": "viktor",
+      "password": "atumalaka",
+      "content": "eng soft",
+      "exercices": [
         {
           "name": "tríceps na corda",
           "reps": "15x3"
@@ -14,14 +14,14 @@
           "name": "rosca martelo",
           "reps": "10x3"
         }
-        ]
-        },
-        {
-          "id": "2",
-          "name": "patrick",
-          "password": "stylo",
-          "content": "eng soft",
-          "exercices": [
+      ]
+    },
+    {
+      "id": "1",
+      "name": "patrick",
+      "password": "stylo",
+      "content": "eng soft",
+      "exercices": [
         {
           "name": "tríceps na corda",
           "reps": "15x3"
@@ -30,8 +30,7 @@
           "name": "rosca invertida",
           "reps": "10x3"
         }
-        ]
-
-        }
       ]
+    }
+  ]
 }

@@ -20,6 +20,13 @@ span
   width: 100%;
 }
 
+.flexbox >*
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login >*
 {
   margin: 1rem;
