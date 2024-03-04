@@ -115,7 +115,7 @@ export function LoginController() {
       setAlert("Error", "Por favor insira algo", "error");
     } else {
       fetch(
-        `http://localhost:5000/users?name=${name.trim()}&password=${pass}`,
+        `https://gym-z-users.vercel.app/users=${name.trim()}&password=${pass}`,
         {
           method: "GET",
           headers: {

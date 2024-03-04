@@ -31,6 +31,12 @@
           "reps": "10x3"
         }
       ]
+    },
+    {
+      "id": "e62b",
+      "name": "eu mesmo",
+      "password": "ata",
+      "content": "deu bom"
     }
   ]
 }

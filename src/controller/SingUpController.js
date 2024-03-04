@@ -31,40 +31,32 @@ export function SingUpController() {
         }
     }
 
-    function createUser(name, pass, ex) {
-        const newUser = new User(name, pass, "deu bom", ex);
+    function createUser(name, pass) {
+        const newUser = new User(name, pass, "deu bom");
         setUser(newUser);
         return newUser;
     }
 
-    async function createNewUser(name, firstPass) {
+   async function createNewUser(name,pass)
+   {
+    try{
+        const user = createUser(name,pass)
 
-        const newUser = createUser(name, firstPass);
-
-        try {
-            const response = await fetch("http://localhost:5000/users", {
-                method: "POST",
-                headers: {
-                    "Content-type": "application/json"
-                },
-                body: JSON.stringify(newUser)
-            });
-
-            if (response.ok) {
-                console.log(`Usuário adicionado: ${JSON.stringify(newUser)}`);
-
-                // Atualiza o array localmente, evitando uma nova chamada GET
-
-                setAlert("Usuário cadastrado com sucesso!", "", "success");
-            } else {
-                console.error(`Erro ao adicionar usuário. Status: ${response.status}`);
-                setAlert("Erro ao cadastrar usuário", "Por favor, tente novamente", "error");
-            }
-        } catch (error) {
-            console.error(`Erro ao adicionar usuário: ${error}`);
-            setAlert("Erro ao cadastrar usuário", "Por favor, tente novamente", "error");
-        }
+        const response = await fetch("https://gym-z-users.vercel.app/users", {
+        
+        method: "POST",
+        headers: 
+        {
+            "Content-type": "application/json"
+        },
+        body : JSON.stringify(user)
+        })
+       
+    }catch(error)
+    {
+        console.log(`Error ${error}`)
     }
+   }
 
     return {
         firstPass,
