@@ -29,6 +29,10 @@
           "day": "segunda",
           "series": "3",
           "repeats": "10"
+        },
+        {
+          "exName": "Descanso",
+          "day": "domingo"
         }
       ]
     },

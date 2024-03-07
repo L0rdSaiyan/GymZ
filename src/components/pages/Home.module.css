@@ -3,14 +3,18 @@
     display: flex;
     width: 100%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome
 {
     width: 100%;
-    position: relative;
     margin-top: 7rem;
-    padding: 5px
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome span
@@ -20,11 +24,21 @@
 
 .exerciseContainer
 {
-    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
+    z-index: 10;
 }
 
+
+@media screen and (max-width: 860px) 
+{
+
+    .exerciseContainer
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}

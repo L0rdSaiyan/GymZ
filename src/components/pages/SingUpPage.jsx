@@ -52,7 +52,6 @@ export default function SignUpPage() {
         handlePassChange={handleSecondPass}
         text="Confirme sua senha"
         />
-
         <Button clickEvent={() => createNewUser(name,firstPass)} text="Cadastrar" />
       </div>
     </div>

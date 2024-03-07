@@ -1,14 +1,38 @@
 .container
 {
-    background-color: grey;
-    text-align: center;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);    text-align: center;
     margin: 10px;
     height: auto;
-    padding: 10px;
+    width: 40%;
+    position: relative;
 
 }
 
-#exercisesWrapper{
+#title
+{
+    border-bottom: 1px solid white;
+}
+
+#title span
+{
+    font-size: 30px;
+    padding: 2%;
+}
+
+#exercisesWrapper
+{
     background-color: red;
-    height: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#exercisesWrapper span
+{
+    font-size: 100%;
+    padding: 2%;
+}
+
+
