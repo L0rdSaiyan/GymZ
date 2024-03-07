@@ -1,42 +1,50 @@
 {
   "users": [
     {
-      "id": "0",
+      "id": "48ee",
       "name": "viktor",
       "password": "atumalaka",
-      "content": "eng soft",
-      "exercices": [
+      "content": "deu bom",
+      "exercises": [
         {
-          "name": "tríceps na corda",
-          "reps": "15x3"
+          "exName": "Remada Baixa",
+          "day": "sexta",
+          "series": "3",
+          "repeats": "10"
         },
         {
-          "name": "rosca martelo",
-          "reps": "10x3"
+          "exName": "Rosca direta",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "10"
+        },
+        {
+          "exName": "Leg day 😐",
+          "day": "quinta",
+          "series": "3",
+          "repeats": "10"
+        },
+        {
+          "exName": "Descanso",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "10"
         }
       ]
     },
     {
-      "id": "1",
-      "name": "patrick",
-      "password": "stylo",
-      "content": "eng soft",
-      "exercices": [
+      "id": "8b5a",
+      "name": "Ryan",
+      "password": "astolfo",
+      "content": "deu bom",
+      "exercises": [
         {
-          "name": "tríceps na corda",
-          "reps": "15x3"
-        },
-        {
-          "name": "rosca invertida",
-          "reps": "10x3"
+          "exName": "Leg Day 😐",
+          "day": "terca",
+          "series": "3",
+          "repeats": "10"
         }
       ]
-    },
-    {
-      "id": "e62b",
-      "name": "eu mesmo",
-      "password": "ata",
-      "content": "deu bom"
     }
   ]
 }

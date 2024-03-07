@@ -1,14 +1,15 @@
 class User
 {
-    constructor(name, password, content)
+    constructor(name, password, content, exercises)
     {
         this.name = name
         this.password = password
         this.content = content
+        this.exercises = exercises
     }
 }
 
-export class Exercice
+export class Exercise
 {
 
     constructor(name,reps)

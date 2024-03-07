@@ -1,5 +1,5 @@
 import React, { useState, createContext, useEffect } from "react";
-import User, { Exercice } from "../model/UserModel";
+import User, { Exercise } from "../model/UserModel";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
@@ -58,7 +58,7 @@ export function LoginController() {
     try
     {
 
-    fetch("https://gym-z-users.vercel.app/users",
+    fetch("http://localhost:5000/users",
     {
       method: "GET",
       headers:
@@ -99,23 +99,25 @@ export function LoginController() {
   function objectIsEmpty(obj) {
     return Object.keys(obj).length === 0;
   }
-
   function mountExercices(exercicesData) {
-    const newExercices = exercicesData.map((exerciceData) => {
-      return new Exercice(exerciceData.name, exerciceData.reps);
-    });
-    setExercices(newExercices);
-    console.log(typeof newExercices);
-    console.log(typeof exercices);
+    if (exercicesData) {
+      const newExercices = exercicesData.map((exerciceData) => {
+        return new Exercise(exerciceData.name, exerciceData.reps);
+      });
+      setExercices(newExercices);
+      console.log(typeof newExercices);
+      console.log(typeof exercices);
+    }
   }
-
+  
 
   function getUser(name, pass, redirect) {
     if (name === "" && pass === "") {
       setAlert("Error", "Por favor insira algo", "error");
     } else {
+      console.log(name,pass)
       fetch(
-        `https://gym-z-users.vercel.app/users=${name.trim()}&password=${pass}`,
+        `http://localhost:5000/users?name=${name}&password=${pass}`,
         {
           method: "GET",
           headers: {
@@ -149,7 +151,6 @@ export function LoginController() {
               return;
             }
           } else {
-            console.log(pass);
             setAlert("Error", "Usuário não encontrado!", "error");
           }
         });

@@ -1,0 +1,14 @@
+.container
+{
+    background-color: grey;
+    text-align: center;
+    margin: 10px;
+    height: auto;
+    padding: 10px;
+
+}
+
+#exercisesWrapper{
+    background-color: red;
+    height: 20px;
+}

@@ -31,8 +31,8 @@ export function SingUpController() {
         }
     }
 
-    function createUser(name, pass) {
-        const newUser = new User(name, pass, "deu bom");
+    function createUser(name, pass,exercises) {
+        const newUser = new User(name, pass, "deu bom",exercises);
         setUser(newUser);
         return newUser;
     }
@@ -40,9 +40,9 @@ export function SingUpController() {
    async function createNewUser(name,pass)
    {
     try{
-        const user = createUser(name,pass)
+        const user = createUser(name,pass,[])
 
-        const response = await fetch("https://gym-z-users.vercel.app/users", {
+        await fetch("http://localhost:5000/users", {
         
         method: "POST",
         headers: 
@@ -51,6 +51,8 @@ export function SingUpController() {
         },
         body : JSON.stringify(user)
         })
+
+        setAlert(`Bem vindo, ${name}`, "Sua conta foi criado com sucesso!", "success")
        
     }catch(error)
     {

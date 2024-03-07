@@ -35,8 +35,11 @@ export default function SignUpPage() {
     <div className={styles.container}>
       <div className={styles.singUp}>
         <p id={styles.title}>Cadastro</p>
-        <InputText name={name} 
-        handleNameChange={handleNameChange} />
+        <InputText 
+        name={name} 
+        handleNameChange={handleNameChange} 
+        placeholder="User"
+        />
 
         <InputPass
         pass={firstPass}

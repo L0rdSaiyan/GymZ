@@ -3,3 +3,22 @@
     position: relative;
     width: 100%;
 }
+
+#btn
+{
+    font-size: 1rem;
+    padding: 10px;
+    border: 2px solid hsla(0, 0%, 80%, 0.5); /* Ajustado para uma borda mais consistente */
+    border-radius: 5px;
+    text-align: center;
+    width: 40%;
+    height: 40px; /* Ajustado a altura para melhor proporção */
+    margin: 10px;
+    transition: ease-in 0.3s;
+}
+
+#btn:hover
+{
+  background-color: limegreen; /* Alterado para uma cor mais brilhante */
+  cursor: pointer;
+}
