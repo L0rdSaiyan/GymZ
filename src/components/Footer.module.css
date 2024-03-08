@@ -7,6 +7,7 @@
 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   height: 80px;
   align-items: center;
   background: transparent;
@@ -15,5 +16,31 @@
   backdrop-filter: blur(15px);
   bottom: 0;
   position: fixed;
+  margin-top: 1500px;
   width: 100%; 
+}
+
+.socialMedia img
+{
+  width: 30px;
+  padding: 10px;
+  height: 30px;
+  transition: 200ms;
+
+}
+
+.socialMedia
+{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialMedia img:hover
+{
+  transform: scale(1.1);
+  cursor: pointer;
 }

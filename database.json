@@ -17,6 +17,36 @@
           "day": "segunda",
           "series": "3",
           "repeats": "10"
+        }, {
+          "exName": "Rosca direta",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "10"
+        }, {
+          "exName": "Rosca direta",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "10"
+        }, {
+          "exName": "Rosca direta",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "10"
+        }, {
+          "exName": "Rosca direta",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "10"
+        }, {
+          "exName": "Rosca direta",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "10"
+        }, {
+          "exName": "Rosca direta",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "10"
         },
         {
           "exName": "Leg day 😐",
@@ -33,6 +63,12 @@
         {
           "exName": "Descanso",
           "day": "domingo"
+        },
+        {
+          "exName": "dsadas",
+          "day": "domingo",
+          "series": "1",
+          "repeats": "1"
         }
       ]
     },

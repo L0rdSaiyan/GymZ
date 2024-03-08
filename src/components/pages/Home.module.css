@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 86%;
 }
 
 .welcome
@@ -28,8 +29,16 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     z-index: 10;
+    margin: 10px;
+    overflow: auto;
+}
+
+.container .welcome
+{
+    top: 0;
+    display: flex;
 }
 
 
@@ -38,7 +47,6 @@
 
     .exerciseContainer
     {
-        display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 }

@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <SignUpPage></SignUpPage>
       },
       {
-        path: "/newexercice",
+        path: "/newexercise",
         element: <CreateExercice></CreateExercice>
       }
     ]

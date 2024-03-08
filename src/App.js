@@ -10,9 +10,9 @@ function App() {
   return (
     <>
     <Container>
-      <Header></Header>
-      <Outlet></Outlet>
-      <Footer></Footer>
+      <Header/>
+      <Outlet/>
+      <Footer/>
     </Container>
     </>
   );

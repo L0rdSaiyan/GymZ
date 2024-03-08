@@ -1,9 +1,12 @@
 a{
   margin: 2px;
-  color:  #c0bebe;
+  color:  #ffffff;
+  background-color: rgb(37, 37, 37);
+  border-radius: 5px;
+  padding: 5px;
 }
 
 a:hover
 {
-  color:  #f3f0f0;
+  color:  #c0bebe;
 }

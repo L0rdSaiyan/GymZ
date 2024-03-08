@@ -4,7 +4,8 @@
     margin: 10px;
     height: auto;
     width: 40%;
-    position: relative;
+    border-radius: 10px;
+	transition: 0.5s;
 
 }
 
@@ -21,12 +22,13 @@
 
 #exercisesWrapper
 {
-    background-color: red;
-    height: auto;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: auto;
+   
 }
 
 #exercisesWrapper span
@@ -36,3 +38,23 @@
 }
 
 
+#exercisesWrapper li 
+{
+    color: #fff;
+    border-bottom: 1px solid white;
+}
+
+
+.trashIcon 
+{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px; 
+    cursor: pointer;
+}
+
+
+.container:hover {
+    transform: scale(1.1);
+    transform: translateY(-20px);
+}

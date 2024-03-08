@@ -26,7 +26,7 @@ export default function CreateExercice()
     return(
         <div className={styles.container}>
             <div className={styles.form}>
-            <h1>Novo Exercício</h1>
+            <span id={styles.title}>Novo Exercício</span>
                 <InputText
                 placeholder="Nome do Exercício"
                 handleNameChange={handleExerciceName}
