@@ -3,7 +3,7 @@ export default function InputNumber({placeholder, eventHandler})
 {
     return(
         <>
-            <input 
+            <input className={styles.inputNum}
             type="number"
             placeholder={placeholder}
             onChange={eventHandler}

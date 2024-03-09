@@ -9,17 +9,15 @@ export default function LoginPage() {
   const {
     name,
     pass,
-    user,
     eye,
     isPasswordVisible,
-    exercices,
     eyeIcon,
     eyeSlash,
     handleNameChange,
     handlePassChange,
     togglePasswordVisibility,
     handleKeyDown,
-    getUser
+    getUser,
   } = LoginController();
 
   return (
@@ -27,9 +25,9 @@ export default function LoginPage() {
       <div className={styles.login}>
         <p id={styles.loginTitle}>Login</p>
         <InputText 
-        name={name} 
-        handleNameChange={handleNameChange}
-        placeholder="User"
+          name={name} 
+          handleNameChange={handleNameChange}
+          placeholder="User"
         />
         <InputPass
           pass={pass}

@@ -15,3 +15,15 @@ select:hover
 {
     background-color: #1e2235;
 }
+
+
+@media screen and (max-width: 720px) 
+{
+
+    select
+    {
+        font-size: 1rem;
+
+    }
+
+}

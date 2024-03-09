@@ -3,12 +3,19 @@ import { useEffect } from "react"
 import { useContext } from 'react';
 import LinkButton from "./LinkButton"
 import trashCan from "./../images/trashcanIcon.png"
+import NewExerciceController from "../controller/NewExerciceController";
 
 export default function Cards({ title, exercises }) {
-    useEffect(() => {
+    
+  useEffect(() => {
       console.log(exercises);
+      renderExercise(exercises)
     }, [exercises]);
   
+    const {
+      deleteExercise
+    } = NewExerciceController()
+
     function renderExercise(exercisesList) {
       return exercisesList.map((exercise) => (
         <ul key={exercise.exName}>
@@ -18,17 +25,13 @@ export default function Cards({ title, exercises }) {
               src={trashCan}
               alt="Deletar"
               className={styles.trashIcon}
-              onClick={() => handleDeleteExercise(exercise.exName)}
-            />
+              onClick={() => deleteExercise(exercise.id)}
+              />
           </li>
         </ul>
       ));
     }
-  
-    function handleDeleteExercise(exerciseName) {
-      console.log(`Deleting exercise: ${exerciseName}`);
-    }
-  
+
     return (
       <>
         <div className={styles.container}>

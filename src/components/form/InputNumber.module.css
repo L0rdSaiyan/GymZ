@@ -1,4 +1,4 @@
-input[type="number"]
+.inputNum
 {
     font-size: 1.6rem;
     padding: 10px;
@@ -9,4 +9,16 @@ input[type="number"]
     border: none;
     border-bottom: 2px solid hsla(0, 0%, 100%, 0.5);
     background: transparent;
+}
+
+
+@media screen and (max-width: 720px) 
+{
+
+    .inputNum
+    {
+        font-size: 1rem;
+
+    }
+
 }

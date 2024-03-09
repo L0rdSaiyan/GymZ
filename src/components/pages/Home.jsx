@@ -61,10 +61,6 @@ export default function Home() {
         console.log(exercisesMon)
     },[exercisesMon])
 
-
-    
-
-
     return (
         <>
           <div className={styles.container}>
