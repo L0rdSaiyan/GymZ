@@ -87,7 +87,7 @@ export default function NewExerciceController() {
                     // Atualizando a lista de exercícios do usuário
                     userData[0].exercises = updatedExercises;
     
-                    const updateUserResponse = await fetch(`https://gym-z-users.vercel.app/users${userId}`, {
+                    const updateUserResponse = await fetch(`https://gym-z-users.vercel.app/users/${userId}`, {
                         method: "PUT",
                         headers: {
                             "Content-type": "application/json"
