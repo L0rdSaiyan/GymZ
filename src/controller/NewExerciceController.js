@@ -74,7 +74,7 @@ export default function NewExerciceController() {
 
     async function deleteExerciseFromUser(userId, exerciseId) {
         try {
-            const response = await fetch(`https://gym-z-users.vercel.app/users${userId}`);
+            const response = await fetch(`https://gym-z-users.vercel.app/users/${userId}`);
     
             // Verificar se o usuário foi encontrado
             if (response.ok) {
