@@ -42,7 +42,7 @@ export function SingUpController() {
     try{
         const user = createUser(name,pass,[])
 
-        await fetch("https://gym-z-users.vercel.app/users", {
+        await fetch("http://localhost:5000/users", {
         
         method: "POST",
         headers: 

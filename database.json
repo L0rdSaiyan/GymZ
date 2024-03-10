@@ -7,23 +7,63 @@
       "content": "deu bom",
       "exercises": [
         {
-          "id": 0.8069108476847429,
+          "id": 0.5333588916745617,
           "exName": "Descanso",
           "day": "domingo"
         },
         {
-          "id": 0.6962480255676817,
-          "exName": "Supino Declinado (MAQ)",
+          "id": 0.910726499229104,
+          "exName": "Descanso",
+          "day": "sabado"
+        },
+        {
+          "id": 0.06603744274548995,
+          "exName": "Alongar o Peito",
+          "day": "segunda"
+        },
+        {
+          "id": 0.3881930570339278,
+          "exName": "Crossover Enclinado",
           "day": "segunda",
           "series": "3",
           "repeats": "10"
         },
         {
-          "id": 0.6980752002723689,
-          "exName": "Descanso",
-          "day": "sabado"
+          "id": 0.6222458988430808,
+          "exName": "Crossover em pé",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "10"
+        },
+        {
+          "id": 0.07794498646276038,
+          "exName": "PeckDeck",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "12"
+        },
+        {
+          "id": 0.09749252548989373,
+          "exName": "Supino Declinado (MAQ)",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "12"
+        },
+        {
+          "id": 0.0878470081303766,
+          "exName": "Supino Inclinado (MAQ)",
+          "day": "segunda",
+          "series": "3",
+          "repeats": "12"
         }
       ]
+    },
+    {
+      "id": "86c7",
+      "name": "daniel",
+      "password": "avila",
+      "content": "deu bom",
+      "exercises": []
     }
   ]
 }

@@ -58,7 +58,7 @@ export function LoginController() {
     try
     {
 
-    fetch("https://gym-z-users.vercel.app/users",
+    fetch("http://localhost:5000/users",
     {
       method: "GET",
       headers:
@@ -117,7 +117,7 @@ export function LoginController() {
     } else {
       console.log(name,pass)
       fetch(
-        `https://gym-z-users.vercel.app/users?name=${name}&password=${pass}`,
+        `http://localhost:5000/users?name=${name}&password=${pass}`,
         {
           method: "GET",
           headers: {
