@@ -116,6 +116,7 @@ export default function NewExerciceController() {
                 userData[0].exercises.push(ex);
             }
 
+            setAlert(`Exercício criado!`, `${ex.exName} adicionado com sucesso ao dia ${ex.day}`, "success" )
             const updateUserResponse = await fetch(`https://gym-z-users.vercel.app/users/${userData[0].id}`, {
                 method: "PUT",
                 headers: {
@@ -126,7 +127,6 @@ export default function NewExerciceController() {
 
             const updatedUserData = await updateUserResponse.json();
             console.log(updatedUserData);
-            setAlert(`Exercício criado!`, `${ex.exName} adicionado com sucesso ao dia ${ex.day}`, "success" )
             
         } catch (error) {
             console.log(`ERRO: ${error}`);
