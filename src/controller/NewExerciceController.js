@@ -76,16 +76,13 @@ export default function NewExerciceController() {
         try {
             const response = await fetch(`https://gym-z-users.vercel.app/users/${userId}`);
     
-            // Verificar se o usuário foi encontrado
             if (response.ok) {
                 const userData = await response.json();
     
                     const updatedExercises = userData.exercises.filter(ex => ex.id !== exerciseId);
     
-                    // Atualizando a lista de exercícios do usuário
                     userData.exercises = updatedExercises;
     
-                    window.location.reload()
                     const updateUserResponse = await fetch(`https://gym-z-users.vercel.app/users/${userId}`, {
                         method: "PUT",
                         headers: {
@@ -93,6 +90,7 @@ export default function NewExerciceController() {
                         },
                         body: JSON.stringify(userData)
                     });
+                    window.location.reload()
     
                     const updatedUserData = await updateUserResponse.json();
                     console.log(updatedUserData);
