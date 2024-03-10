@@ -144,7 +144,7 @@ export function LoginController() {
               setAlertWithRedirect(
                 "Sucesso!",
                 "Login realizado. Redirecionando...",
-                "sucess",
+                "success",
                 1000,
                 "/home"
               );
