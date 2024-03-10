@@ -5,8 +5,8 @@ export default function NewExerciceController() {
    
     const [exName, setExName] = useState("");
     const [day, setDay] = useState("");
-    const [series, setSeries] = useState();
-    const [repeats, setRepeats] = useState();
+    const [series, setSeries] = useState(0);
+    const [repeats, setRepeats] = useState(0);    
     const [exercice, setExercice] = useState([]);
     const [getExercise, setGetExercise] = useState([])
     const user = localStorage.getItem("user");
@@ -52,7 +52,7 @@ export default function NewExerciceController() {
         setRepeats(event.target.value);
     }
 
-    async function createExerise() {
+    async function createExercise() {
         if(day)
         {
             const ex = new Exercise(Math.random(), exName, day, series, repeats);
@@ -85,6 +85,7 @@ export default function NewExerciceController() {
                     // Atualizando a lista de exercícios do usuário
                     userData.exercises = updatedExercises;
     
+                    window.location.reload()
                     const updateUserResponse = await fetch(`https://gym-z-users.vercel.app/users/${userId}`, {
                         method: "PUT",
                         headers: {
@@ -94,7 +95,6 @@ export default function NewExerciceController() {
                     });
     
                     const updatedUserData = await updateUserResponse.json();
-                    window.location.reload()
                     console.log(updatedUserData);
             } else {
                 console.log("Usuário não encontrado ou erro na resposta da API.");
@@ -106,32 +106,35 @@ export default function NewExerciceController() {
     
 
     async function addExerciceToUser() {
-        try {
-            const ex = await createExerise();
 
-            const response = await fetch(`https://gym-z-users.vercel.app/users?name=${user}&password=${pass}`);
-            const userData = await response.json();
-
-            if (exercice) { 
-                userData[0].exercises.push(ex);
-            }
-
-            setAlert(`Exercício criado!`, `${ex.exName} adicionado com sucesso ao dia ${ex.day}`, "success" )
-            const updateUserResponse = await fetch(`https://gym-z-users.vercel.app/users/${userData[0].id}`, {
-                method: "PUT",
-                headers: {
-                    "Content-type": "application/json"
-                },
-                body: JSON.stringify(userData[0])
-            });
-
-            const updatedUserData = await updateUserResponse.json();
-            console.log(updatedUserData);
-            
-        } catch (error) {
-            console.log(`ERRO: ${error}`);
+        try{
+        const ex = await createExercise();
+        const response = await fetch(`https://gym-z-users.vercel.app/users?name=${user}&password=${pass}`);
+        const userData = await response.json();
+    
+        if (ex) {
+            userData[0].exercises.push(ex);
         }
+    
+        setAlert(`Exercício criado!`, `${ex.exName} adicionado com sucesso ao dia ${ex.day}`, "success");
+        const updateUserResponse = await fetch(`https://gym-z-users.vercel.app/users/${userData[0].id}`, {
+            method: "PUT",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(userData[0])
+        });
+    
+        const updatedUserData = await updateUserResponse.json();
+        console.log(updatedUserData);
+    
+        }catch(error)
+        {
+            console.log(`Error found: ${error}`)
+        }
+        
     }
+    
 
     async function fetchExercises(user, pass) {
         try {
@@ -168,6 +171,6 @@ export default function NewExerciceController() {
         handleRepeats,
         addExerciceToUser,
         fetchExercises,
-        createExerise,
+        createExercise,
     };
 }
