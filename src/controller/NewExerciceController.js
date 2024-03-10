@@ -74,7 +74,7 @@ export default function NewExerciceController() {
 
     async function deleteExerciseFromUser(userId, exerciseId) {
         try {
-            const response = await fetch(`http://localhost:5000/users/${userId}`);
+            const response = await fetch(`https://gym-z-users.vercel.app/users/${userId}`);
     
             // Verificar se o usuário foi encontrado
             if (response.ok) {
@@ -85,7 +85,7 @@ export default function NewExerciceController() {
                     // Atualizando a lista de exercícios do usuário
                     userData.exercises = updatedExercises;
     
-                    const updateUserResponse = await fetch(`http://localhost:5000/users/${userId}`, {
+                    const updateUserResponse = await fetch(`https://gym-z-users.vercel.app/users/${userId}`, {
                         method: "PUT",
                         headers: {
                             "Content-type": "application/json"
@@ -109,14 +109,14 @@ export default function NewExerciceController() {
         try {
             const ex = await createExerise();
 
-            const response = await fetch(`http://localhost:5000/users?name=${user}&password=${pass}`);
+            const response = await fetch(`https://gym-z-users.vercel.app/users?name=${user}&password=${pass}`);
             const userData = await response.json();
 
             if (exercice) { 
                 userData[0].exercises.push(ex);
             }
 
-            const updateUserResponse = await fetch(`http://localhost:5000/users/${userData[0].id}`, {
+            const updateUserResponse = await fetch(`https://gym-z-users.vercel.app/users/${userData[0].id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json"
@@ -135,7 +135,7 @@ export default function NewExerciceController() {
 
     async function fetchExercises(user, pass) {
         try {
-            const response = await fetch(`http://localhost:5000/users?name=${user}&password=${pass}`,
+            const response = await fetch(`https://gym-z-users.vercel.app/users?name=${user}&password=${pass}`,
                 {
                     method: "GET",
                     headers:
