@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
+    "gh-pages": "^6.1.1",
     "json-server": "^1.0.0-alpha.23",
     "jsonserver": "^0.1.6",
     "react": "^18.2.0",
